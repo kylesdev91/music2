@@ -35,7 +35,6 @@ export default {
   methods: {
     toogleAuthModal() {
       this.modalStore.isOpen = !this.modalStore.isOpen;
-      console.log(this.modalStore.isOpen);
     },
   },
 };

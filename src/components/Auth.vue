@@ -90,7 +90,11 @@
             </button>
           </form>
           <!-- Registration Form -->
-          <vee-form v-show="tab === 'register'" :validationSchema="schema">
+          <vee-form
+            v-show="tab === 'register'"
+            :validationSchema="schema"
+            @submit="register"
+          >
             <!-- Name -->
             <div class="mb-3">
               <label class="inline-block mb-2">Name</label>
@@ -208,6 +212,11 @@ export default {
     ...mapWritableState(useModalStore, {
       modalVisibility: "isOpen",
     }),
+  },
+  methods: {
+    register(values) {
+      console.log(values);
+    },
   },
 };
 </script>
